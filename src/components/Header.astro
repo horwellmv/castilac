@@ -1,0 +1,46 @@
+---
+import Carousel from '../components/Carousel.astro';
+import Slider from '../components/Slider.astro';
+
+
+---
+
+<header class="">
+    
+    <nav class="flex place-content-between mb-10 mx-5 lg:mx-32">
+        
+        <img class="w-28 lg:w-48 mt-2 -ml-8 lg:ml-0" src="/Castilac.svg" alt="">
+        
+        <div class="flex gap-3 lg:gap-7 text-sm md:text-xl md:font-semibold mt-11">
+            
+            <a href="#" class="hover:text-blue-50">Nosotros</a>
+            <a href="#" class="hover:text-blue-50">Productos</a>
+            <a href="#" class="hover:text-blue-50">Fabrica</a>
+            <a href="#" class="hover:text-blue-50">Contacto</a>
+        </div>
+    </nav>
+    
+    <Slider/>
+    
+    <div class="seccion ml-5">
+        <h1 class="md:mx-32 text-2xl md:text-5xl font-semibold mb-5">Castilac</h1>
+        <p class="md:mx-32 md:text-2xl font-medium md:font-normal text-pretty w-4/5 md:w-2/3"> Bienvenido a nuestra fábrica de quesos del Castillo, donde la tradición y la innovación se unen para crear los sabores más exquisitos. Combinamos la tradición con las técnicas más modernas para asegurar la calidad superior de nuestros quesos.</p>
+        <br>
+        <p class="md:mx-32 md:text-2xl font-medium md:font-normal text-pretty  w-4/5 md:w-2/3" >Cada pieza es una obra de arte culinario, hecha con la leche más fresca y los ingredientes naturales más finos. Explore nuestra variedad de productos y descubra por qué somos la elección preferida de los amantes del queso.</p>
+        
+    </div>
+
+</header>
+
+<style>
+
+    .seccion {
+        background-image:url(/queso.svg) ;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        
+    }
+
+</style>
