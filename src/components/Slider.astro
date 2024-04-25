@@ -1,0 +1,53 @@
+---
+
+---
+
+<div class="slider mb-10">
+    <div class="slider-inner">
+        <img class="" src="/carousel1.webp" alt="" />
+        <img class="" src="/carousel2.webp" alt="" />
+        <img class="" src="/carousel3.webp" alt="" />
+        <img class="" src="/carousel4.webp" alt="" />
+    </div>
+</div>
+
+<style>
+    /* OVerflow esconde el borde de la imagen vecina */
+    .slider {
+        overflow: hidden;
+    }
+
+    .slider-inner {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: nowrap;
+        transition: all 1s ease-in;
+    }
+/* 
+    .slider-inner img {
+        aspect-ratio: 16/9;
+    } */
+
+    img {
+        min-width: 100%;
+    }
+</style>
+
+<script>
+    //Selecciona la clase contenedora y manipula el estilo transpformX para mover el grupo de imagenes
+    //de a una en el eje X - en un intervalo modificable en el setInterval
+
+    let sliderInner = document.querySelector(".slider-inner") as HTMLElement;
+    let images = sliderInner.querySelectorAll("img");
+    let index = 1;
+
+    setInterval(function () {
+        let porcentaje = index * -100;
+
+        sliderInner.style.transform = "translateX(" + porcentaje + "%)";
+        index++;
+        if (index > images.length - 1) {
+            index = 0;
+        }
+    }, 3000);
+</script>

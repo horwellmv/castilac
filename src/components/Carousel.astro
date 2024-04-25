@@ -1,0 +1,24 @@
+---
+
+---
+
+<div class="carousel">
+    <img class="itemCarousel" src="/carousel1.webp" alt="" />
+    <img class="itemCarousel" src="/carousel2.webp" alt="" />
+    <img class="itemCarousel" src="/carousel3.webp" alt="" />
+    <img class="itemCarousel" src="/carousel4.webp" alt="" />
+</div>
+
+<style>
+    /* Este estilo permite un carrousel estatico desplazado por el usuario ... optimo en mobil, no en escritorio */
+    .carousel {
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .carousel > .itemCarousel {
+        min-width: 100%;
+        scroll-snap-align: start;
+    }
+</style>
